@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  body {
+    background: #111;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    background-image: url('eath3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* Хедер с логотипом и навигацией */
+  header {
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    background: #171717;
+    height: 70px;
+    padding: 0 106px; /* Отступы слева и справа по 132px */
+    position: relative;
+  }
+  
+  .header-logo {
+    position: absolute;
+    margin-left: 60px;
+    top: 65%;
+    transform: translateY(-50%); /* Вертикальное центрирование */
+  }
+
+  .header-logo:hover svg {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .header__nav {
+    margin-left: auto; /* Сдвигаем навигацию вправо */
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 106px; /* Отступ между пунктами меню 106px */
+    padding-right: 60px; /* Отступ справа для всего меню */
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 100;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-list a:hover {
+    color: #ccc;
+  }
+  
+  /* Основной контент */
+  .hero {
+    align-items: left;
+    padding: 60px;
+    min-height: 90vh;
+    max-height: 1080px;
+  }
+
+  .hero__content {
+    margin-left: 70px;
+    max-width: 700px;
+    margin-top: 115px;
+  }
+
+  .hero__title {
+    font-size: 85px;
+    line-height: 1.2;
+    font-weight: 550;
+  }
+  
+.hero__description {
+    font-size: 18px;
+    margin-top: 25px;
+    color: #ccc;
+    font-weight: 400;
+  }
+  
+.hero-actions {
+    display: flex;
+    gap: 20px;
+  }
+  
+.btn--download {
+    display: inline-flex;
+    width: 170px;
+    height: 50px;
+    margin-top: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    border: 1.2px solid white;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0 15px;
+    box-sizing: border-box;
+    gap: 8px; /* Добавляем пробел между элементами внутри кнопки */
+}
+
+/* Стиль для SVG иконки */
+.btn--download svg { /* Иконка будет использовать текущий цвет текста */
+    width: 25px; /* Размер иконки */
+    height: 25px;
+    transition: fill 0.3s ease;
+}
+
+.btn--download svg path {
+  fill: currentColor; /* Будет использовать цвет текста кнопки */
+}
+
+/* Изменение при наведении */
+.btn--download:hover {
+    background: #dddddd;
+    color: #000000;
+    border-color: #0e0e0e;
+}
+
+/* Если нужно отдельно управлять цветом иконки при наведении */
+.btn--download:hover svg path {
+  fill: #000000; /* Явное указание цвета (опционально) */
+}
+  
+.btn--learn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    width: 180px;
+    height: 60px;
+    gap: 0px;
+    margin-top: 55px;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+
+.btn-text {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 2px; /* Слегка опускаем стрелку */
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.btn--learn:hover {
+  gap: 12px; /* Увеличиваем расстояние между элементами */
+}
+
+.btn--learn:hover .btn-text {
+  transform: translateX(-3px); /* Текст сдвигается влево */
+}
+
+.btn--learn:hover .arrow-icon {
+  transform: translateX(4px) rotate(180deg);
+  animation: pulse 1s infinite alternate;
+}
+
+  
+.platforms__label {
+    margin-top: 120px;
+    color: #656565;
+    font-size: 36px;
+    font-weight: 400;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+.platforms__list {
+    font-weight: 400;
+    color: #656565;
+    font-size: 20px;
+  }
+
+.platforms__list span {
+    margin-right: 8px; /* Отступ справа для каждого элемента */
+}
